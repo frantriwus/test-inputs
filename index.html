@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Teclados para Formularios HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 22px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .section-title {
+            background-color: #f0f0f0;
+            padding: 8px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prueba de Teclados para Formularios HTML</h1>
+    
+    <div class="section-title">Entrada de Texto Básica</div>
+    
+    <div class="form-group">
+        <label for="text">Texto (type="text")</label>
+        <input type="text" id="text" placeholder="Texto normal" autocomplete="off">
+        <p class="info">Debería mostrar el teclado estándar</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="search">Búsqueda (type="search")</label>
+        <input type="search" id="search" placeholder="Términos de búsqueda" autocomplete="off">
+        <p class="info">Podría mostrar teclado con botón de búsqueda</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Contraseña (type="password")</label>
+        <input type="password" id="password" placeholder="Contraseña" autocomplete="off">
+        <p class="info">Suele ocultar los caracteres</p>
+    </div>
+    
+    <div class="section-title">Entrada Numérica</div>
+    
+    <div class="form-group">
+        <label for="number">Número (type="number")</label>
+        <input type="number" id="number" placeholder="123" autocomplete="off">
+        <p class="info">Debería mostrar teclado numérico</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="tel">Teléfono (type="tel")</label>
+        <input type="tel" id="tel" placeholder="+34 123 456 789" autocomplete="off">
+        <p class="info">Debería mostrar teclado para números telefónicos</p>
+    </div>
+    
+    <div class="section-title">Correo y URL</div>
+    
+    <div class="form-group">
+        <label for="email">Email (type="email")</label>
+        <input type="email" id="email" placeholder="nombre@ejemplo.com" autocomplete="off">
+        <p class="info">Debería incluir @ y .com en el teclado</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="url">URL (type="url")</label>
+        <input type="url" id="url" placeholder="https://ejemplo.com" autocomplete="off">
+        <p class="info">Debería incluir / y .com en el teclado</p>
+    </div>
+    
+    <div class="section-title">Fecha y Hora</div>
+    
+    <div class="form-group">
+        <label for="date">Fecha (type="date")</label>
+        <input type="date" id="date">
+        <p class="info">Debería mostrar selector de fecha</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="time">Hora (type="time")</label>
+        <input type="time" id="time">
+        <p class="info">Debería mostrar selector de hora</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="datetime-local">Fecha y Hora (type="datetime-local")</label>
+        <input type="datetime-local" id="datetime-local">
+        <p class="info">Debería mostrar selector combinado</p>
+    </div>
+    
+    <div class="section-title">Otros Tipos</div>
+    
+    <div class="form-group">
+        <label for="color">Color (type="color")</label>
+        <input type="color" id="color">
+        <p class="info">Debería mostrar selector de color</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="range">Rango (type="range")</label>
+        <input type="range" id="range" min="0" max="100" value="50">
+        <p class="info">Debería mostrar deslizador</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="textarea">Área de Texto (textarea)</label>
+        <textarea id="textarea" rows="4" placeholder="Texto multilínea" autocomplete="off"></textarea>
+        <p class="info">Para texto largo con varias líneas</p>
+    </div>
+
+    <div class="form-group">
+        <label for="with-pattern">Texto con patrón (pattern="[0-9]{5}")</label>
+        <input type="text" id="with-pattern" pattern="[0-9]{5}" placeholder="Código postal (5 dígitos)" autocomplete="off">
+        <p class="info">Texto con validación de patrón para 5 dígitos</p>
+    </div>
+
+    <div class="form-group">
+        <label for="with-inputmode">Text con inputmode="numeric"</label>
+        <input type="text" id="with-inputmode" inputmode="numeric" placeholder="Solo números" autocomplete="off">
+        <p class="info">Atributo inputmode para indicar tipo de teclado</p>
+    </div>
+</body>
+</html>
