@@ -1,155 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba de Teclados para Formularios HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            font-size: 22px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        .info {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-            font-style: italic;
-        }
-        .section-title {
-            background-color: #f0f0f0;
-            padding: 8px;
-            margin: 20px 0 10px 0;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geolocalización Simple</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    button {
+      background-color: #0B70B1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .output {
+      background-color: #fafafa;
+      padding: 1rem;
+      border-radius: 4px;
+      min-height: 100px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    
+    .error {
+      color: tomato;
+      font-weight: bold;
+    }
+
+  </style>
 </head>
 <body>
-    <h1>Prueba de Teclados para Formularios HTML</h1>
-    
-    <div class="section-title">Entrada de Texto Básica</div>
-    
-    <div class="form-group">
-        <label for="text">Texto (type="text")</label>
-        <input type="text" id="text" placeholder="Texto normal" autocomplete="off">
-        <p class="info">Debería mostrar el teclado estándar</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="search">Búsqueda (type="search")</label>
-        <input type="search" id="search" placeholder="Términos de búsqueda" autocomplete="off">
-        <p class="info">Podría mostrar teclado con botón de búsqueda</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="password">Contraseña (type="password")</label>
-        <input type="password" id="password" placeholder="Contraseña" autocomplete="off">
-        <p class="info">Suele ocultar los caracteres</p>
-    </div>
-    
-    <div class="section-title">Entrada Numérica</div>
-    
-    <div class="form-group">
-        <label for="number">Número (type="number")</label>
-        <input type="number" id="number" placeholder="123" autocomplete="off">
-        <p class="info">Debería mostrar teclado numérico</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="tel">Teléfono (type="tel")</label>
-        <input type="tel" id="tel" placeholder="+34 123 456 789" autocomplete="off">
-        <p class="info">Debería mostrar teclado para números telefónicos</p>
-    </div>
-    
-    <div class="section-title">Correo y URL</div>
-    
-    <div class="form-group">
-        <label for="email">Email (type="email")</label>
-        <input type="email" id="email" placeholder="nombre@ejemplo.com" autocomplete="off">
-        <p class="info">Debería incluir @ y .com en el teclado</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="url">URL (type="url")</label>
-        <input type="url" id="url" placeholder="https://ejemplo.com" autocomplete="off">
-        <p class="info">Debería incluir / y .com en el teclado</p>
-    </div>
-    
-    <div class="section-title">Fecha y Hora</div>
-    
-    <div class="form-group">
-        <label for="date">Fecha (type="date")</label>
-        <input type="date" id="date">
-        <p class="info">Debería mostrar selector de fecha</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="time">Hora (type="time")</label>
-        <input type="time" id="time">
-        <p class="info">Debería mostrar selector de hora</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="datetime-local">Fecha y Hora (type="datetime-local")</label>
-        <input type="datetime-local" id="datetime-local">
-        <p class="info">Debería mostrar selector combinado</p>
-    </div>
-    
-    <div class="section-title">Otros Tipos</div>
-    
-    <div class="form-group">
-        <label for="color">Color (type="color")</label>
-        <input type="color" id="color">
-        <p class="info">Debería mostrar selector de color</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="range">Rango (type="range")</label>
-        <input type="range" id="range" min="0" max="100" value="50">
-        <p class="info">Debería mostrar deslizador</p>
-    </div>
-    
-    <div class="form-group">
-        <label for="textarea">Área de Texto (textarea)</label>
-        <textarea id="textarea" rows="4" placeholder="Texto multilínea" autocomplete="off"></textarea>
-        <p class="info">Para texto largo con varias líneas</p>
-    </div>
+  <h1>Geolocalización Simple</h1>
+  
+  <div class="card">
+    <p>Obtener la ubicación actual del usuario usando la API de Geolocalización de JavaScript.</p>
+    <button id="btnGetLocation">Obtener mi ubicación</button>
+    <div class="output" id="locationOutput">Los resultados aparecerán aquí...</div>
+  </div>
 
-    <div class="form-group">
-        <label for="with-pattern">Texto con patrón (pattern="[0-9]{5}")</label>
-        <input type="text" id="with-pattern" pattern="[0-9]{5}" placeholder="Código postal (5 dígitos)" autocomplete="off">
-        <p class="info">Texto con validación de patrón para 5 dígitos</p>
-    </div>
 
-    <div class="form-group">
-        <label for="with-inputmode">Text con inputmode="numeric"</label>
-        <input type="text" id="with-inputmode" inputmode="numeric" placeholder="Solo números" autocomplete="off">
-        <p class="info">Atributo inputmode para indicar tipo de teclado</p>
-    </div>
+  <script>
+
+    // Solicita la ubicación del usuario al hacer clic en el botón con ID 'btnGetLocation'.
+    // El navegador pregunta al usuario si permite compartir su ubicación.
+    document.getElementById('btnGetLocation').addEventListener('click', () => {
+      const locationOutput = document.getElementById('locationOutput');
+      locationOutput.innerText = "Solicitando ubicación...";
+  
+      // Verifica si el navegador soporta geolocalización
+      if (!navigator.geolocation) {
+        return (locationOutput.innerHTML = "<span class='error'>Tu navegador no soporta geolocalización</span>");
+      }
+  
+      // Función de éxito: obtiene y muestra la ubicación
+      const onSuccess = (position) => {
+        const { latitude, longitude, accuracy } = position.coords;
+        const timestamp = new Date(position.timestamp).toLocaleTimeString();
+        locationOutput.innerText = `
+          Ubicación obtenida:
+          Latitud: ${latitude}
+          Longitud: ${longitude}
+          Precisión: ${accuracy} metros
+          Hora: ${timestamp}`;
+      };
+  
+      // Función de error: maneja los errores de geolocalización
+      const onError = (error) => {
+        const errors = {
+          1: "Usuario denegó la solicitud de geolocalización",
+          2: "Información de ubicación no disponible",
+          3: "Tiempo de espera agotado para obtener ubicación",
+          0: "Error desconocido",
+        };
+        locationOutput.innerHTML = `<span class='error'>${errors[error.code] || "Error desconocido"}</span>`;
+      };
+  
+      // Solicita la ubicación al navegador
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    });
+  </script>
+  
+
+
 </body>
 </html>
