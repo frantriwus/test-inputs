@@ -63,6 +63,17 @@
 
   <script>
 
+    function obtenerLocalidad(lat, lon) {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log("Localidad:", data.address.city || data.address.town || data.address.village);
+        })
+        .catch(error => console.error("Error en la geocodificación inversa:", error));
+    }
+
     // Solicita la ubicación del usuario al hacer clic en el botón con ID 'btnGetLocation'.
     // El navegador pregunta al usuario si permite compartir su ubicación.
     document.getElementById('btnGetLocation').addEventListener('click', () => {
@@ -84,6 +95,8 @@
           Longitud: ${longitude}
           Precisión: ${accuracy} metros
           Hora: ${timestamp}`;
+
+         obtenerLocalidad(latitute, longitude);
       };
 
       // Función de error: maneja los errores de geolocalización
