@@ -70,6 +70,7 @@
         .then(response => response.json())
         .then(data => {
             console.log("Localidad:", data.address.city || data.address.town || data.address.village);
+            console.table(data);
         })
         .catch(error => console.error("Error en la geocodificación inversa:", error));
     }
