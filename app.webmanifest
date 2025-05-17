@@ -1,0 +1,5 @@
+{
+    "name": "Test PWA. This is is a test for PWA app",
+    "short_name": "Test PWA",
+    "start_url": "./"
+}
