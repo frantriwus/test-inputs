@@ -1,6 +1,24 @@
 {
-    "name": "Test PWA. This is is a test for PWA app",
+    "name": "Bromec. This is is a test for PWA app",
     "short_name": "Test PWA",
     "start_url": "./",
-    "orientation": "all"
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#fff",
+    "theme_color": "#48270e",
+    "icons": [
+        {
+        "src": "/icons/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+        },
+        {
+        "src": "/icons/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "maskable"
+        }
+    ],
+    "description": "lorem ipsum bromec test pwa app",
+    "lang": "es"
 }
